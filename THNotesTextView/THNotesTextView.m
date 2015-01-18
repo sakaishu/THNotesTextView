@@ -74,7 +74,7 @@
             // Rounding the point to the nearest pixel.
             // Greatly reduces drawing time.
             CGFloat roundedLinePointY = roundf(linePointY * screenScale) / screenScale;
-            NSLog(@"linePointYRounded %f (%f)",roundedLinePointY, linePointY);
+            //NSLog(@"linePointYRounded %f (%f)",roundedLinePointY, linePointY);
             CGContextMoveToPoint(context, boundsX, roundedLinePointY);
             CGContextAddLineToPoint(context, boundsWidth, roundedLinePointY);
         }
@@ -105,7 +105,7 @@
         CGContextClosePath(context);
         CGContextStrokePath(context);
         
-        NSLog(@"contentSize.width %f",self.contentSize.width);
+        //NSLog(@"contentSize.width %f",self.contentSize.width);
     }
 }
 
@@ -115,7 +115,7 @@
         .width = contentSize.width - self.margins.left - self.margins.right,
         .height = MAX(contentSize.height, self.bounds.size.height - self.margins.top)
     };
-    NSLog(@"width: %f, height %f",contentSize.width,contentSize.height);
+    //NSLog(@"width: %f, height %f",contentSize.width,contentSize.height);
     [super setContentSize:contentSize];
 }
 
